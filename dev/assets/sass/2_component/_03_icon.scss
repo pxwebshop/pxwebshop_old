@@ -1,0 +1,25 @@
+/*------------------------------------------------------------
+icon
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-icon1 {
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    padding: 0 0 5px 35px;
+    line-height: 40px;
+    position: relative;
+    &:before {
+        width: 30px;
+        height: 100%;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        content: "\e927";
+        font-family: "icomoon";
+        font-size: 24px;
+        color: #42d79e;
+    }
+}

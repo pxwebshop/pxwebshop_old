@@ -1,0 +1,17 @@
+.section-courses{
+    margin-top: 90px;
+    .l-container{
+        display: block;
+        .wrapper-courses{
+            width: 40%;
+            float: right;
+        }
+        .block-title{
+            animation-name: coursesanimation;
+            animation-duration: 2s;
+        }
+    }
+}
+.block-see__all{
+    margin-top: 5rem;
+}

@@ -1,0 +1,36 @@
+main {
+	padding: 0px;
+	margin: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+
+/* layout
+------------------------------------------------------------*/
+@font-face {
+	font-family: 'Mulish', sans-serif;
+}
+
+body {
+    font-family: $mainFonts;
+	font-size: 1.5rem;
+	line-height: 1.5;
+    font-weight: 500;
+	overflow-x: hidden;
+
+	&.is-fixed {
+		position: fixed;
+	}
+}
+
+//-------------------------------------------------------
+.l-container{
+	max-width: $baseWidth;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 30px;
+
+	@include sp() {
+		padding: 0 0px;
+	}
+}

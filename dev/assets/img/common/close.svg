@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Group_2099" data-name="Group 2099" transform="translate(-315)">
+    <rect id="Rectangle_30" data-name="Rectangle 30" width="60" height="60" transform="translate(315)" fill="#483b35"/>
+    <g id="icon-close" transform="translate(337 22)">
+      <path id="icon-close-2" data-name="icon-close" d="M13.332,11.928,9.406,8l3.926-3.926L15.906,1.5a.331.331,0,0,0,0-.467L14.969.1A.331.331,0,0,0,14.5.1L11.928,2.672,8,6.6,4.076,2.672,1.5.1a.331.331,0,0,0-.467,0L.1,1.035A.331.331,0,0,0,.1,1.5L2.672,4.075,6.6,8,2.672,11.928.1,14.5a.331.331,0,0,0,0,.467l.936.936a.331.331,0,0,0,.467,0l2.574-2.574L8,9.406l3.926,3.926L14.5,15.906a.331.331,0,0,0,.467,0l.936-.936a.331.331,0,0,0,0-.467Z" transform="translate(-0.002 -0.002)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

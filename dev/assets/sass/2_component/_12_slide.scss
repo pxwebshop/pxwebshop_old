@@ -1,0 +1,91 @@
+/*------------------------------------------------------------
+video
+------------------------------------------------------------*/
+
+/* Slider
+------------------------------------------------------------*/
+.c-slider {
+    background: url("/assets/img/bg.jpeg") no-repeat center 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    &__info {
+        width: 50%;
+        float: left;
+        padding:  0 20px;
+        color: $colorWhite;
+        @include sp() {
+            width: 100%;
+        }
+        h2 {
+            margin-top: 40px;
+            color: $colorGreen--bright;
+            text-transform: uppercase;
+            @include sp() {
+                font-size: 1.8rem;
+            }
+        }
+        h3 {
+            margin-top: 20px;
+            color: $colorGreen--bright;
+            border-bottom: 1px solid $colorGreen;
+            padding-bottom: 10px;
+            @include sp() {
+                font-size: 1.8rem;
+            }
+        }
+        p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            // font-size: 1.6rem;
+        }
+    }
+    &__img {
+        width: 50%;
+        float: left;
+        padding:  0 20px;
+        @include sp() {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    &__form {
+        border-top: 1px solid $colorGreen;
+        padding-top: 20px;
+        input {
+            padding: 10px;
+            border: none;
+            height: 100%;
+            border-radius: 3px;
+            // font-size: 1.6rem;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        
+        button {
+            padding: 10px;
+            border: none;
+            // font-size: 1.6rem;
+            cursor: pointer;
+            background-color: $colorGreen;
+            color: $colorWhite;
+            border-radius: 3px;
+        }
+    }
+    &__phone {
+        margin: 0px 0 40px 0;
+        display: inline-block;
+        background-color: $colorGreen--bright;
+        padding: 10px 20px;
+        border-radius:  5px;
+        font-weight: bold;
+        // font-size: 1.7rem;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+        i {
+            padding-right: 5px;
+        }
+    }
+}

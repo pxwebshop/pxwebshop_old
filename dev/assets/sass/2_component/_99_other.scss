@@ -1,0 +1,229 @@
+/*------------------------------------------------------------
+other
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-block1 {
+    $root: &;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-top: 30px;
+        @include sp() {
+            margin-top: 10px;
+        }
+    }
+    &__listItem {
+        margin-bottom: 10px;
+        padding-left: 10px;
+        &:nth-child(1),
+        &:nth-child(2) {
+            width: 50%;
+            @include sp() {
+                width: 100%;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        &:nth-child(2) {
+            img {
+                border-radius: 5px;
+            }
+        }
+        &:nth-child(3),  &:nth-child(4),
+        &:nth-child(5),  &:nth-child(6) {
+            width: 25%;
+            @include sp() {
+                width: 50%;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__listItemInfo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2.0rem;
+        color: $colorWhite;
+        display: block;
+        background: rgba(1,1,1,0.5);
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    &__listItemLink {
+        display: block;
+        // padding: 10px;
+        position: relative;
+        &:hover {
+            transition: all 0.5s ease;
+            transform: translateY(-5px);
+            img {
+                opacity: 1;
+            }
+            #{$root}__listItemInfo {
+                background: rgba(1,1,1,0);
+                transition: all 1s ease;
+                color: $colorRed;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.c-block2 {
+    $root: &;
+    @include sp() {
+        padding: 0 10px;
+    }
+    &__title {
+        text-align: center;
+        font-size: 2.5rem;
+        padding-top: 100px;
+        @include sp() {
+            padding-top: 40px;
+            font-size: 2.1rem;
+        }
+        &--sub {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        &--large {
+            font-size: 2.8rem;
+            @include sp() {
+                font-size: 2.3rem;
+            }
+        }
+    }
+    &__color {
+        color: $colorRed;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-top: 30px;
+    }
+    &__listItem {
+        width: 20%;
+        padding-left: 20px;
+        margin-bottom: 15px;
+
+        #{$root}__list--style1 & {
+            width: 25%;
+            @include sp() {
+                width: 50%;
+            }
+        }
+        @include sp() {
+            width: 50%;
+        }
+    }
+    &__listItemLink {
+        display: block;
+        border: 3px solid;
+        text-align: center;
+        transition: color 0.25s;
+        background: none;
+        border: 0;
+        box-sizing: border-box;
+        padding: 1em 2em;
+        box-shadow: inset 0 0 0 2px $colorGreen--bright;
+        color: $colorGreen--bright;
+        font-size: inherit;
+        font-weight: 700;
+        min-height: 100px;
+        height: 100%;
+        position: relative;
+        vertical-align: middle;
+        &::before,
+        &::after {
+            box-sizing: inherit;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__listItemImg {
+        height: 100px;
+        img {
+            height: 100%;
+        }
+    }
+    &__listItemAnimation {
+        transition: color 0.25s;
+
+        &::before,
+        &::after {
+            border: 2px solid transparent;
+            width: 0;
+            height: 0;
+        }
+        &::before {
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+        &:hover {
+            color: $colorGreen--bright;
+        }
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover::before {
+            border-top-color: $colorGreen--bright;
+            border-right-color: $colorGreen--bright;
+            transition:
+            width 0.25s ease-out,
+            height 0.25s ease-out 0.25s;
+        }
+
+        &:hover::after {
+            border-bottom-color: $colorGreen--bright;
+            border-left-color: $colorGreen--bright;
+            transition:
+            border-color 0s ease-out 0.5s,
+            width 0.25s ease-out 0.5s,
+            height 0.25s ease-out 0.75s;
+        }
+    }
+    &__listItemMeet {
+        &:hover {
+            color: $colorRed;
+            transform: translateY(-5px);
+            transition: all 0.5s ease;
+        }
+        &::after {
+            top: 0;
+            left: 0;
+        }
+        &:hover::before {
+            border-top-color: $colorRed;
+            border-right-color: $colorRed;
+        }
+        &:hover::after {
+            border-bottom-color: $colorRed;
+            border-left-color: $colorRed;
+            transition:
+            height 0.25s ease-out,
+            width 0.25s ease-out 0.25s;
+        }
+    }
+    &__listItemCategory {
+        margin-top: 10px;
+    }
+}

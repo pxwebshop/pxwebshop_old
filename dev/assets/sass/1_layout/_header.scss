@@ -1,0 +1,107 @@
+/* Header
+------------------------------------------------------------*/
+.c-header {
+    $root: &;
+
+    max-height: 70px;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    padding: 5px 20px;
+    background-color: $colorGreen;
+    @include sp() {
+        padding: 0;
+        max-height: none;
+        height: auto;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        @include sp() {
+            flex-wrap: wrap;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+    &__listItem {
+        margin-left: 20px;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: $colorWhite;
+        @include breakpoint(tablets) {
+            margin-left: 15px;
+        }
+        @include sp() {
+            font-size: 1.6rem;
+        }
+        // ----------------------------
+        a:hover {
+            text-decoration: underline;
+            opacity: 0.6;
+            @include sp() {
+                text-decoration: none;
+                opacity: 1;
+            }
+        }
+        .active {
+            text-decoration: underline;
+            opacity: 0.6;
+            @include sp() {
+                text-decoration: none;
+                opacity: 1;
+            }
+        }
+    }
+    &__nav1 {
+        position: absolute;
+        top: 60px;
+        background-color: #483b35;
+        height: 100vh;
+        width: 100%;
+        transition: .3s;
+        position: fixed;
+        transform: translateX(100%);
+        #{$root}__list {
+            flex-direction: column;
+        }
+        #{$root}__listItem {
+            margin-left: 0;
+            line-height: 1.5;
+            border-bottom: 1px solid rgba(255,255,255,.25);
+            a {
+                padding: 13px 20px 12px;
+                display: block;
+            }
+        }
+        &.is-show {
+            transform: translateX(0);
+        }
+    }
+    .is-menu {
+        position: absolute;
+        right: 0px;
+        img:last-child {
+            display: none;
+        }
+
+        &.is-active {
+            img {
+                &:first-child {
+                    display: none;
+                }
+
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-text1 {
+    &__item {
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        font-weight: bold;
+        @include sp() {
+            margin-bottom: 10px;
+        }
+        i {
+            margin-right: 10px;
+            color: $colorGreen--bright;
+            font-size: 2.2rem;
+        }
+    }
+}

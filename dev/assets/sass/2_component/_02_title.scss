@@ -1,0 +1,34 @@
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+
+
+/*
+------------------------------------------------------------*/
+.c-title1 {
+    &__text {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 2.6rem;
+        text-align: center;
+        text-transform: uppercase;
+        @include sp() {
+            margin-top: 0px;
+        }
+        strong {
+            color: $colorGreen--bright;
+            font-weight: bold;
+            font-size: 3.0rem;
+            @include sp() {
+                font-size: 2.6rem;
+            }
+        }
+    }
+    &__imgCaption {
+        text-align: center;
+    }
+    &--sub {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}

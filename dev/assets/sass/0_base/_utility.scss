@@ -1,0 +1,45 @@
+///*------------------------------------------------------------
+//Anchor position
+//------------------------------------------------------------*/
+//.u-anchor:before{
+//	content:"";
+//	margin-top: -100px;
+//	padding-top: 100px;
+//}
+
+//------------------------------------------------------------
+// margin
+//------------------------------------------------------------
+
+//------------------------------------------------------------
+// color
+//------------------------------------------------------------
+.u-white{
+    color: #ffffff;
+}
+.u-center--text{
+    text-align: center;
+}
+.u-clear {
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+.u-pxwebshop {
+    font-size: 1.8rem;
+    color: $colorGreen--bright;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@for $i from 1 through 100 {
+    .u-mt#{$i} {
+        margin-top: #{$i}px;
+    }
+    .u-pt#{$i} {
+        padding-top: #{$i}px;
+    }
+}

@@ -1,0 +1,59 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+.c-footer {
+    $root: &;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    @include sp() {
+        margin-top: 50px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__listItem {
+        width: 25%;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-top: 10px;
+        line-height: 1.5;
+        @include sp() {
+            width: 100%;
+            padding-left: 20px;
+            margin-top: 30px;
+        }
+        &:not(:first-child) {
+            padding-left: 40px;
+            @include sp() {
+                padding-left: 20px;
+            }
+            #{$root}__listChildItem {
+                i {
+                    color: $colorRed;
+                }
+            }
+        }
+    }
+    &__listChild {
+        #{$root}__listChildItem {
+            &:first-child {
+                margin-bottom: 40px;
+                color: $colorGreen--bright;
+                font-size: 1.8rem;
+                @include sp() {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    &__listChildItem {
+        margin-top: 7px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        i {
+            margin-right: 10px;
+        }
+    }
+}

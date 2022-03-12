@@ -1,0 +1,35 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+	*zoom: 1;
+	&:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+@mixin sp {
+    @media screen and (max-width: #{$breakpoint1}) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width: #{$breakpoint1 + 1px}) {
+        @content;
+    }
+}
+
+//============================================
+// breakpoint
+//============================================
+@mixin breakpoint($point) {
+	@if $point == tablets {
+		@media only screen and (max-width: 1024px) { @content ; }
+	}
+	@else if $point == sp {
+		@media only screen and (max-width: 767px) { @content ; }
+	}
+}
